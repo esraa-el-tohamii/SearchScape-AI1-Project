@@ -40,30 +40,30 @@ SearchScape is an educational visualization tool designed to help understand how
 
 ## 📁 Project Structure
 
-text id="projstruct"
-assets/                # Images, sprites, visual assets
+
+assets/ # Images, sprites, visual assets
 
 src/
-├── algorithms/        # Pathfinding algorithms
-├── data/              # Grid/data models
-├── utils/             # Helper functions
-├── audio.js           # Sound system
-├── character.js       # Player/agent logic
-├── compare.js         # Algorithm comparison logic
-├── grid.js            # Grid generation & rendering
-├── heuristics.js      # Heuristic functions (A*)
-├── maze.js            # Maze generation
-├── metrics.js         # Performance tracking
-├── particles.js       # Visual effects
-├── report.js          # Results/report system
-├── simulation.js      # Main simulation controller
-├── spriteConfig.js    # Sprite mapping/config
-├── ui.js              # UI controls
-├── visualization.js   # Animation & rendering logic
+├── algorithms/ # Pathfinding algorithms
+├── data/ # Grid/data models
+├── utils/ # Helper functions
+├── audio.js # Sound system
+├── character.js # Player/agent logic
+├── compare.js # Algorithm comparison logic
+├── grid.js # Grid generation & rendering
+├── heuristics.js # Heuristic functions (A*)
+├── maze.js # Maze generation
+├── metrics.js # Performance tracking
+├── particles.js # Visual effects
+├── report.js # Results/report system
+├── simulation.js # Main simulation controller
+├── spriteConfig.js # Sprite mapping/config
+├── ui.js # UI controls
+├── visualization.js # Animation & rendering logic
 
-index.html             # Main entry point  
-main.js                # App bootstrap  
-style.css              # Global styling  
+index.html # Main entry point
+main.js # App bootstrap
+style.css # Global styling
 
 ---
 
