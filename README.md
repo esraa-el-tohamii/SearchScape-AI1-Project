@@ -137,7 +137,7 @@ The application provides a comparison view including:
 ## 🌍 Live Demo
 
 🔗 Live Demo:
-**
+*https://searchscape1.netlify.app/*
 
 ---
 
