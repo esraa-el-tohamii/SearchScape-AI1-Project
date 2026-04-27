@@ -20,10 +20,10 @@ The goal of this project is to help students understand how different search alg
 
 | Component       | Description                                                                  |
 | --------------- | ---------------------------------------------------------------------------- |
-| Performance | Shortest path, minimum explored nodes, execution time, efficiency            |
-| Environment | Grid-based world with obstacles (trees), start (player), and goal (treasure) |
-| Actuators   | Move Up, Down, Left, Right (+ Diagonal in 8-direction mode)                  |
-| Sensors     | Detect neighboring cells, obstacles, and goal position                       |
+| Performance | Path Length, Nodes Explored, Execution Time |
+| Environment | Grid-based environment with obstacles       |
+| Actuators   | Agent movement and visualization            |
+| Sensors     | Grid state, node detection                  |
 
 ---
 
@@ -31,12 +31,12 @@ The goal of this project is to help students understand how different search alg
 
 | Element                | Description                                               |
 | ---------------------- | --------------------------------------------------------- |
-| Objective          | Find the optimal path from start to goal                  |
-| Decision Variables | Next node selection, movement direction                   |
-| Environment        | Discrete 2D grid with static obstacles                    |
-| State              | Current agent position + grid configuration               |
-| Decision Rule      | Based on the selected algorithm (BFS, DFS, UCS, A*, etc.) |
-| Assumptions        | Finite grid, static obstacles, uniform or weighted costs  |
+| Observability          | Fully Observable                                          |
+| Determinism            | Deterministic                                             |
+| Episodic / Sequential  | Sequential                                                |
+| Static / Dynamic       | Static                                                    |
+| Discrete / Continuous  | Discrete                                                  |
+| Agent Type             | Single-Agent                                              |
 
 ---
 
