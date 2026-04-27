@@ -77,7 +77,6 @@ The goal of this project is to help students understand how different search alg
 
 ## 📂 Project Structure
 ```
-id="q8l2zp"
 app/                # App Router
 components/         # UI and main visualizer
 components/ui/      # Reusable shadcn components
@@ -110,7 +109,6 @@ pnpm dev
 
 ### Open in browser
 ```
-id="9r2k4c"
 http://localhost:3000
 ```
 ---
