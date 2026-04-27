@@ -1,138 +1,163 @@
-# 🧠 SearchScape AI Pathfinding Simulator
+# 🧠 SearchScape | Algorithm Learning Game
 
-An interactive grid-based simulation that visualizes how different AI pathfinding algorithms explore a map to find the shortest path between a start node and a goal node.
+SearchScape is an interactive, game-based web application designed to visualize and teach pathfinding algorithms in a dynamic and engaging way.
+
+It transforms abstract AI concepts into a real-time simulation where a character navigates a grid to reach a goal while avoiding obstacles.
 
 ---
 
-## 🚀 Overview
+## 🎯 Project Purpose
 
-SearchScape is an educational visualization tool designed to help understand how search algorithms operate in real-time.
+The goal of this project is to help students understand how different search algorithms work by:
 
-### 🧩 Core Idea
+* Visualizing their behavior step-by-step
+* Comparing performance across algorithms
+* Interacting with a customizable grid environment
 
-- 🧍 A character represents the Start Node (Agent)
-- 🎯 A treasure chest represents the Goal Node
-- 🌳 Obstacles (trees) block movement
-- 🤖 Algorithms explore the grid step-by-step to find a path
+---
+
+## 🧩 PEAS Description (AI Agent Model)
+
+| Component       | Description                                                                  |
+| --------------- | ---------------------------------------------------------------------------- |
+| Performance | Shortest path, minimum explored nodes, execution time, efficiency            |
+| Environment | Grid-based world with obstacles (trees), start (player), and goal (treasure) |
+| Actuators   | Move Up, Down, Left, Right (+ Diagonal in 8-direction mode)                  |
+| Sensors     | Detect neighboring cells, obstacles, and goal position                       |
+
+---
+
+## 🧠 ODESDA Analysis
+
+| Element                | Description                                               |
+| ---------------------- | --------------------------------------------------------- |
+| Objective          | Find the optimal path from start to goal                  |
+| Decision Variables | Next node selection, movement direction                   |
+| Environment        | Discrete 2D grid with static obstacles                    |
+| State              | Current agent position + grid configuration               |
+| Decision Rule      | Based on the selected algorithm (BFS, DFS, UCS, A*, etc.) |
+| Assumptions        | Finite grid, static obstacles, uniform or weighted costs  |
 
 ---
 
 ## 🎮 Features
 
-- 🎥 Real-time pathfinding visualization  
-- 🤖 Multiple AI algorithms (BFS, DFS, A\*)
-- 🎭 Animated character movement  
-- 🧩 Grid-based environment simulation  
-- 📊 Metrics & performance tracking  
-- ✨ Particle / visual effects system  
-- 🧱 Modular vanilla JavaScript architecture  
+* 🎯 Multiple pathfinding algorithms:
+
+  * BFS
+  * DFS
+  * UCS (equivalent to Dijkstra)
+  * DLS
+  * IDS
+  * Bidirectional Search
+  * Greedy Best-First Search
+  * A*
+
+* 🧍 Character-based visualization
+
+* 🌳 Interactive obstacle drawing
+
+* ⚡️ Real-time animation
+
+* 📊 Algorithm comparison panel
+
+* 🎨 Cyberpunk / Neon UI
 
 ---
 
-## 🛠 Tech Stack
+## 🧱 Tech Stack
 
-- HTML5 – Structure  
-- CSS3 – Styling & layout  
-- JavaScript (ES6) – Core logic  
-- DOM Manipulation – Rendering system  
+* Next.js 16
+* React 19
+* TypeScript
+* Tailwind CSS
+* shadcn/ui + Radix UI
 
 ---
 
-## 📁 Project Structure
-
+## 📂 Project Structure
 ```
-assets/ # Images, sprites, visual assets
-
-src/
-├── algorithms/ # Pathfinding algorithms
-├── data/ # Grid/data models
-├── utils/ # Helper functions
-├── audio.js # Sound system
-├── character.js # Player/agent logic
-├── compare.js # Algorithm comparison logic
-├── grid.js # Grid generation & rendering
-├── heuristics.js # Heuristic functions (A*)
-├── maze.js # Maze generation
-├── metrics.js # Performance tracking
-├── particles.js # Visual effects
-├── report.js # Results/report system
-├── simulation.js # Main simulation controller
-├── spriteConfig.js # Sprite mapping/config
-├── ui.js # UI controls
-├── visualization.js # Animation & rendering logic
-
-index.html # Main entry point
-main.js # App bootstrap
-style.css # Global styling
+id="q8l2zp"
+app/                # App Router
+components/         # UI and main visualizer
+components/ui/      # Reusable shadcn components
+lib/                # Pathfinding algorithms logic
+hooks/              # Custom React hooks
+public/             # Runtime assets
+assets/             # Source assets
 ```
+---
+
+## 🚀 Installation & Running
+
+### Using npm
+
+```bash id="2m3v7k"
+npm install
+npm run dev
+```
+---
+
+### Using pnpm
+
+```bash id="6s8t1n"
+npm install -g pnpm 
+pnpm -v 
+pnpm i 
+pnpm dev
+```
+---
+
+### Open in browser
+```
+id="9r2k4c"
+http://localhost:3000
+```
+---
+
+## ▶️ How to Use
+
+1. Select the Start Node (character)
+2. Select the Goal Node (treasure)
+3. Draw obstacles (trees)
+4. Choose an algorithm
+5. Run the simulation
 
 ---
 
-## 🧪 Run Locally
+## 📊 Algorithms Comparison
 
-### 🚀 Option 1: Open Directly
-index.html
+The application provides a comparison view including:
 
----
-
-### ⚡️ Option 2: VS Code Live Server (Recommended)
-
-1. Right-click on index.html  
-2. Click "Open with Live Server"
-
-💡 Why Live Server?
-
-- Prevents CORS issues  
-- Supports JS modules correctly  
-- Auto reload on changes  
+* Path length
+* Explored nodes
+* Execution time
+* Efficiency
 
 ---
 
-## ⚙️ How It Works
-grid.js          → builds the grid system
-simulation.js    → controls the main loop
-algorithms/      → pathfinding logic
-visualization.js → animates exploration step-by-step
-character.js     → updates agent movement & direction
-metrics.js       → tracks performance data
+## 🌍 Live Demo
+
+🔗 Live Demo:
+**
 
 ---
 
-## 🧠 Supported Algorithms
+## 📌 Future Improvements
 
-- 🔵 Breadth First Search (BFS) – guarantees shortest path  
-- 🟣 Depth First Search (DFS) – faster but not optimal  
-- 🟡 A\* – heuristic-based, most efficient  
-- ⚙️ Custom Comparison Mode
-
----
-
-## 📊 Features Breakdown
-
-- ⏱️ Real-time simulation speed control  
-- 📍 Start / Goal placement system  
-- 🚧 Dynamic obstacle handling  
-- 📈 Performance metrics *(nodes visited, path length)*  
-- 🎨 Sprite-based animation system  
-
----
-
-## 🔮 Future Improvements
-
-- 📱 Mobile responsiveness  
-- ➕ More pathfinding algorithms  
-- 🎛 Better UI dashboard  
-- 💾 Save / load maps  
-- 📊 Advanced analytics panel  
+* Add Dijkstra explicitly in UI
+* Save/load grid state
+* Add sound effects
+* Improve mobile responsiveness
 
 ---
 
 ## 👩‍💻 Author
 
-Developed by SearchScape Team
+Developed as an educational AI visualization project.
 
 ---
 
-## 📜 License
+## ⭐️ Support
 
-This project is open-source under the MIT License
+If you like this project, consider giving it a star ⭐️ on GitHub!
